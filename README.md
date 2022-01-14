@@ -51,6 +51,7 @@ gnupg_key { 'jenkins_foo_key':
   user       => 'foo',
   key_source => 'http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key',
   key_type   => public,
+  key_trust  => 
 }
 ```
 
@@ -165,6 +166,10 @@ before the gnupg_key resource executes.
 #####`key_type`
 
 **OPTIONAL** - key type. Valid values (public|private|both). Default: public
+
+####`key_trust`
+
+**OPTIONAL** - key trust level. Valid values (2-6 or undefined|unknown, never, marginal, full, or ultimate) defaults to not setting a trust level
 
 #####`proxy`
 
